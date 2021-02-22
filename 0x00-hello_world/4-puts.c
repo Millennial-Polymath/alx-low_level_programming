@@ -1,3 +1,4 @@
+/*A simple program that prints out a string using puts*/
 #include <stdio.h>
 int main(void)
 {
