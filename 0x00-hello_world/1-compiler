@@ -1,3 +1,2 @@
 #!/bin/bash
 gcc -c -Wall -g -c $CFILE > ${CFILE}
-
