@@ -1,0 +1,1 @@
+Projects to test my understanding C basics including the compilation process
