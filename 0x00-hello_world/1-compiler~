@@ -1,3 +1,0 @@
-#!/bin/bash
-gcc -c -Wall -g -c $CFILE > ${CFILE:0:-2}
-
