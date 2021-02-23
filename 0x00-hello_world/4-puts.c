@@ -2,7 +2,9 @@
 #include <stdio.h>
 
 /**
- * returns 0 - Prints a string using puts
+ * main - Prints a string using puts
+ *
+ * Return: returns void
  */
 int main(void)
 {
