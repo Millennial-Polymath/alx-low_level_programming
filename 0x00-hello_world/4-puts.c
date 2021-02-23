@@ -1,7 +1,9 @@
 /*A simple program that prints out a string using puts*/
 #include <stdio.h>
 
-/* testing use of c*/
+/**
+ * returns 0 - Prints a string using puts
+ */
 int main(void)
 {
 	puts("\"Programming is like building a multilingual puzzle");
