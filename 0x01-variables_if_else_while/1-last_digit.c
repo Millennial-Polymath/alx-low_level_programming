@@ -12,12 +12,11 @@
 int main(void)
 {
 	int n;
+	int k;
 
 	srand(time(0));
 	n = rand() - RAND_MAX / 2;
 	/* your code goes there */
-	int k;
-
 	k = n % 10;
 
 	if (k > 5)
@@ -28,8 +27,8 @@ int main(void)
 		printf("The last digit of %d is %d and is 0\n", n, k);
 	} else if (k < 6 && k != 0)
 	{
-		printf("The last digit of %d is %d and is less than 6 and not");
-		printf("0\n", n, k)
+		printf("The last digit of %d is %d and is less than 6", n, k);
+		printf("and not 0\n");
 	}
 
 	return (0);
