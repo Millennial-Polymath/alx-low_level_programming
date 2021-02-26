@@ -1,10 +1,9 @@
 #include <stdio.h>
 /**
- * main - Entry point, prints digits 0-9 separated by a comma
+ * main - Entry point, prints 0-9 separated with a comma
  *
- * Return: Zero, success
- **/
-
+ * Return: returns zero(sucess)
+ */
 int main(void)
 {
 	int n;
@@ -12,17 +11,13 @@ int main(void)
 
 	for (n = 0; n <= 9; n++)
 	{
-		if (n < 9)
+		putchar(n + '0');
+		if (n != 9)
 		{
-			putchar(n + '0');
 			putchar(44);
+			putchar(32);
 		}
-		else
-		{
-			putchar(n + '0');
-		}
-		putchar(32);
-
 	}
+	putchar(10);
 	return (0);
 }
