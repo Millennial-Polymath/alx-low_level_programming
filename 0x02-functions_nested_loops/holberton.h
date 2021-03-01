@@ -13,4 +13,6 @@ void print_remaining_days(int month, int day, int year);
 
 int _putchar(char c);
 
+void print_alphabet(void);
+
 #endif /* HOLBERTON_H */
