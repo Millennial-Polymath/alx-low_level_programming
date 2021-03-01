@@ -7,10 +7,10 @@
 
 int main(void)
 {
-	char str[10] = "Holberton";
+	char str[9] = "Holberton";
 	int index;
 
-	for (index = 0; index <= 9; index++)
+	for (index = 0; index <= 8; index++)
 	{
 		_putchar(str[index]);
 	}
