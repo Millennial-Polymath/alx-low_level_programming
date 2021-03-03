@@ -7,7 +7,7 @@
  * Return: returns the value of the last digit
  */
 
-int print_last_digit (int x)
+int print_last_digit(int x)
 {
 	int y;
 
