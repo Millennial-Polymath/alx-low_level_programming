@@ -55,7 +55,7 @@ void print_to_98(int n)
 					_putchar('0' - (count % 10));
 				}
 
-				else if (count < -9 && count)
+				else if (count < -9 && count > -100)
 				{
 					_putchar('-');
 					_putchar('0' - (count / 10));
