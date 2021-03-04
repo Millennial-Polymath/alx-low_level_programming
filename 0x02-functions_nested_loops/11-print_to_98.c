@@ -63,24 +63,26 @@ void print_to_98(int n)
 				}
 				else if (count <= -100)
 				{
+					_putchar('-');
 					_putchar('0' - (count / 100));
 					_putchar('0' - (count / 10) - 10);
-					_putchar('0' - (count % 10);
-						 }
-				}
-				else
-				{
-					_putchar((count / 10) + '0');
-					_putchar((count % 10) + '0');
-				}
-				if (count != 98)
-				{
-					_putchar(44);
-					_putchar(32);
+					_putchar('0' - (count % 10));
 				}
 			}
-
+			else
+			{
+				_putchar((count / 10) + '0');
+				_putchar((count % 10) + '0');
+			}
+			if (count != 98)
+			{
+				_putchar(44);
+				_putchar(32);
+			}
 		}
-		_putchar('\n');
 
 	}
+	_putchar('\n');
+
+}
+
