@@ -22,19 +22,19 @@ void print_to_98(int n)
 		{
 			if (count >= 100)
 			{
-				putchar((count / 100) + '0');
-				putchar(((count / 10) - 10) + '0');
-				putchar((count % 10) + '0');
+				_putchar((count / 100) + '0');
+				_putchar(((count / 10) - 10) + '0');
+				_putchar((count % 10) + '0');
 			}
 			else
 			{
-				putchar((count / 10) + '0');
-				putchar((count % 10) + '0');
+				_putchar((count / 10) + '0');
+				_putchar((count % 10) + '0');
 			}
 			if (count != 98)
 			{
-				putchar(44);
-				putchar(32);
+				_putchar(44);
+				_putchar(32);
 			}
 		}
 
@@ -45,35 +45,42 @@ void print_to_98(int n)
 		{
 			if (count < 10 && count >= 0)
 			{
-				putchar(count + '0');
+				_putchar(count + '0');
 			}
 			else if (count < 0)
 			{
 				if (count >= -9)
 				{
-					putchar('-');
-					putchar('0' - (count % 10));
+					_putchar('-');
+					_putchar('0' - (count % 10));
 				}
 
-				else if (count < -9)
+				else if (count < -9 && count)
 				{
-					putchar('-');
-					putchar('0' - (count / 10));
-					putchar('0' - (count % 10));
+					_putchar('-');
+					_putchar('0' - (count / 10));
+					_putchar('0' - (count % 10));
+				}
+				else if (count <= -100)
+				{
+					_putchar('0' - (count / 100));
+					_putchar('0' - (count / 10) - 10);
+					_putchar('0' - (count % 10);
+						 }
+				}
+				else
+				{
+					_putchar((count / 10) + '0');
+					_putchar((count % 10) + '0');
+				}
+				if (count != 98)
+				{
+					_putchar(44);
+					_putchar(32);
 				}
 			}
-			else
-			{
-				putchar((count / 10) + '0');
-				putchar((count % 10) + '0');
-			}
-			if (count != 98)
-			{
-				putchar(44);
-				putchar(32);
-			}
+
 		}
+		_putchar('\n');
 
 	}
-	putchar('\n');
-}
