@@ -1,7 +1,7 @@
 #include "holberton.h"
 
 /**
- * print_square.c - prints a square followed by a new line
+ * print_square - prints a square followed by a new line
  * @size: The number of # that make up the length and width
  *
  * Return: Null
