@@ -77,4 +77,5 @@ char *_strcpy(char *dest, char *src);
 
 char *strcat(char *dest, char *src);
 
+char *_strncat(char *dest, char *src, int n);
 #endif /* HOLBERTON_H */
