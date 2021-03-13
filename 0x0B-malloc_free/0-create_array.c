@@ -22,15 +22,18 @@ char *create_array(unsigned  int size, char c)
 		return (NULL);
 	}
 
-	if (array == NULL)
+	if (sizeof(array) == 0)
 	{
 		return (NULL);
 	}
-
-	array = malloc(sizeof(*array) * size);
-	for (count = 0; count < size; count++)
+	else
 	{
-		array[count] = c;
+
+		array = malloc(sizeof(*array) * size);
+		for (count = 0; count < size; count++)
+		{
+			array[count] = c;
+		}
 	}
 	return (array);
 }
