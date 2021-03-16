@@ -22,7 +22,7 @@
 
 ### Project Breakdown
 | Task # |  Type   |                Description |
-| :---   |   :---: |  :---: |
+| :---   |   :---: |  :--- |
 |0       | **Mandatory**| Write a function that produces output accordint to a format |
 |1       | **Mandatory**| Handle the following conversion specifiers: d i |
 | 2 | **Mandatory** | Create a `man page` for your function|
