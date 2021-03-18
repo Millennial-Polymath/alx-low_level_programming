@@ -1,4 +1,10 @@
 #include "lists.h"
+/**
+ * print_list - prints all elements in list_t
+ * @h: The head node
+ *
+ * Return: returns the total number of nodes
+ */
 
 size_t print_list(const list_t *h)
 {

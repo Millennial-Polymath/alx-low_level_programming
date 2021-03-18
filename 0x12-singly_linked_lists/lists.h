@@ -18,10 +18,13 @@ typedef struct list_s
 	char *str;
 	unsigned int len;
 	struct list_s *next;
-}list_t;
+} list_t;
 
 /**
- * Function prototypes
+ * print_list - prints elements of a list_t
+ * @h: Head node
+ *
+ * Return: count of nodes
  */
 
 size_t print_list(const list_t *h);
