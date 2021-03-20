@@ -26,8 +26,8 @@ void print_string(va_list list)
 	{
 		str = "(nil)";
 	}
-	else
-		printf("%s", str);
+
+	printf("%s", str);
 
 }
 /**

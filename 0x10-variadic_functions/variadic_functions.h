@@ -12,7 +12,7 @@ typedef struct type_spec
 {
 	char letter;
 	void (*func)(va_list);
-} spec_t ;
+} spec_t;
 
 
 int sum_them_all(const unsigned int n, ...);
