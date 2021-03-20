@@ -79,12 +79,12 @@ void print_all(const char * const format, ...)
 
 	va_start(list, format);
 	/*iterate through the list access the functio*/
-
+	i = 0;
 	j = 0;
 	separator = " ";
 	while (format != NULL && format[j] != '\0')
 	{
-		i = 0;
+
 		while (type[i].letter != '\0')
 		{
 			if (type[i].letter == format[j])
