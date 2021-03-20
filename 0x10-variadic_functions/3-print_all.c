@@ -81,7 +81,7 @@ void print_all(const char * const format, ...)
 	/*iterate through the list access the functio*/
 	i = 0;
 	j = 0;
-	separator = " ";
+	separator = "";
 	while (format != NULL && format[j] != '\0')
 	{
 
