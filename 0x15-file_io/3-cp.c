@@ -40,7 +40,7 @@ int main(int argc, char *argv[])
 		}
 	}
 	if (n == -1)
-		dprintf(2, "Error: Can't write to %s\n", argv[2]), exit(98);
+		dprintf(2, "Error: Can't read from %s\n", argv[1]), exit(98);
 
 	if (close(fd1) != 0)
 		dprintf(2, "Error: Can't close fd %d\n", fd1), exit(100);
