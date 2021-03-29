@@ -12,7 +12,7 @@ ssize_t read_textfile(const char *filename, size_t letters)
 {
 	int fd;
 	ssize_t nbites, printed_chars;
-	char *buf = (char *) malloc(sizeof(char) * letters + 2);
+	char *buf = (char *) malloc(sizeof(char) * letters + 5);
 
 	if (!filename)
 		return (0);
@@ -20,19 +20,19 @@ ssize_t read_textfile(const char *filename, size_t letters)
 
 	fd = open(filename, O_RDONLY);
 
-	if (fd < 0)
+	if (fd == -1)
 	{
 		return (0);
 	}
 
-	nbites = read(fd, buf, letters);
-	buf[letters] = '\0';
+	nbites = read(fd, (void *)buf, letters);
 
-	if (nbites < 0)
+
+	if (nbites == -1)
 		return (0);
 
 
-	printed_chars = write(1, buf, nbites);
+	printed_chars = write(1, (const void *)buf, nbites);
 
 	close(fd);
 	free(buf);
