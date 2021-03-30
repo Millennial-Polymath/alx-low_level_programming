@@ -12,9 +12,6 @@
 int main(int argc, char *argv[])
 {
 
-#define PERMS 0664
-#define BUFFER 1024
-
 
 	int fd1, fd2, n;
 
@@ -35,13 +32,13 @@ int main(int argc, char *argv[])
 	}
 
 
-	fd2 = open(argv[2], O_CREAT | O_TRUNC | O_WRONLY, PERMS);
+	fd2 = open(argv[2], O_CREAT | O_TRUNC | O_WRONLY, 0664);
 
 
 	if (fd2 == -1)
 		dprintf(STDERR_FILENO, "Error: Can't write to %s\n", argv[2]), exit(99);
 
-	while ((n = read(fd1, buf, BUFFER)) > 0) /* cp: copy fd1 to fd2 */
+	while ((n = read(fd1, buf, 1024)) > 0) /* cp: copy fd1 to fd2 */
 	{
 		if (write(fd2, buf, n) != n)
 		{
