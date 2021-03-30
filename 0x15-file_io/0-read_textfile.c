@@ -32,7 +32,7 @@ ssize_t read_textfile(const char *filename, size_t letters)
 		return (0);
 
 
-	printed_chars = write(1, (const void *)buf, nbites);
+	printed_chars = write(SDOUT_FILENO, (const void *)buf, nbites);
 
 	close(fd);
 	free(buf);
