@@ -1,6 +1,6 @@
 #include "holberton.h"
-#define BUFFER 1024
-#define PERMS 0664
+
+
 /**
  * main - Program starts here
  * @argc: number of arguments
@@ -11,6 +11,11 @@
 
 int main(int argc, char *argv[])
 {
+
+#define PERMS 0664
+#define BUFFER 1024
+
+
 	int fd1, fd2, n;
 
 	char buf[BUFFER];
