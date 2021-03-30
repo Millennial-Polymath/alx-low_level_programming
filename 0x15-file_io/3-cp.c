@@ -15,7 +15,7 @@ int main(int argc, char *argv[])
 
 	int fd1, fd2, n;
 
-	char buf[BUFFER];
+	char buf[1024];
 
 	if (argc != 3)
 	{
