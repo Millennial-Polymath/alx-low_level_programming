@@ -14,7 +14,7 @@ ssize_t read_textfile(const char *filename, size_t letters)
 	ssize_t nbites, printed_chars;
 	char *buf = (char *) malloc(sizeof(char) * letters + 5);
 
-	if (!filename)
+	if (!filename || !filename)
 		return (0);
 
 
@@ -29,10 +29,12 @@ ssize_t read_textfile(const char *filename, size_t letters)
 
 
 	if (nbites == -1)
+	{
+		free(buf);
 		return (0);
+	}
 
-
-	printed_chars = write(SDOUT_FILENO, (const void *)buf, nbites);
+	printed_chars = write(STDOUT_FILENO, (const void *)buf, nbites);
 
 	close(fd);
 	free(buf);
