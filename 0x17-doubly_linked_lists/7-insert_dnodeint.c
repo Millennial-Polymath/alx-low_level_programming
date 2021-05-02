@@ -4,6 +4,7 @@
  * @h: pointer to the address of the first node in a double linked list
  * @idx: index to add the new node
  * @n: value of the new node
+ * Return: the address of the New node
  */
 
 dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
