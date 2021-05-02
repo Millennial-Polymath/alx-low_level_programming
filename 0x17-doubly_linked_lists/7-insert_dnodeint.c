@@ -9,8 +9,10 @@
 
 dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
 {
+
 	dlistint_t *newNode;
 	dlistint_t *temp = *h;
+	unsigned int count = 0;
 
 	newNode = malloc(sizeof(dlistint_t));
 	if (newNode == NULL)
@@ -21,12 +23,12 @@ dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
 
 
 	if (idx == 0)
-		newNode= add_dnodeint(h, n);
+		newNode = add_dnodeint(h, n);
 
-	while (idx != 0 && temp != NULL)
+	while (count < idx && temp != NULL)
 	{
 		temp = temp->next;
-		idx--; /* find the pointer at index */
+		count++; /* find the pointer at index */
 	}
 
 	if (temp->next == NULL && temp->prev != NULL)
