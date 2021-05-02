@@ -20,15 +20,16 @@ dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
 	newNode->prev = NULL;
 
 
-	if ((*h)->next == NULL && (*h)->prev == NULL)
+	if (idx == 0)
 		newNode= add_dnodeint(h, n);
-;
+
 	while (idx != 0 && temp != NULL)
 	{
 		temp = temp->next;
-		idx--;
+		idx--; /* find the pointer at index */
 	}
-	if (temp->next == NULL)
+
+	if (temp->next == NULL && temp->prev != NULL)
 		newNode = add_dnodeint_end(&temp, n);
 	else
 	{
