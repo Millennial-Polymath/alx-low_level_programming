@@ -36,7 +36,10 @@ dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
 		count++; /* find the pointer at index */
 	}
 
-	if (temp->next == NULL && temp->prev != NULL)
+	if (temp->next != NULL && temp->prev == NULL)
+		return (add_dnodeint(h, n));
+
+	else if (temp->next == NULL && temp->prev != NULL)
 		return (add_dnodeint_end(h, n));
 
 	newNode->next = temp;
