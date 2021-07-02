@@ -1,0 +1,7 @@
+SRC=main.c holberton.c
+CC=gcc
+
+.PHONY : holberton
+holberton: $(SRC)
+	$(CC) $(SRC) -o holberton
+
