@@ -10,13 +10,13 @@ all: $(OBJ)
 	$(CC) $(OBJ) -o $(NAME)
 
 
-.PHONY: clean
+#.PHONY: clean
 clean:
 	$(RM) $(NAME) *~
-.PHONY: oclean
+#.PHONY: oclean
 oclean:
 	$(RM) $(OBJ)
-.PHONY: fclean
+#.PHONY: fclean
 fclean: clean oclean
-.PHONY: re
+#.PHONY: re
 re: oclean all
