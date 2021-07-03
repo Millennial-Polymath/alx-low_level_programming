@@ -1,41 +1,41 @@
-#!usr/bin/python3
+#!/usr/bin/python3
 '''
-Contains island_perimeter function
+Module contains island_perimeter function
 '''
+
+
+def neighbours_no(grid, y, x):
+    row = len(grid)
+    column = len(grid[1])
+    count = 0
+
+    '''top'''
+    if (y > 0 and grid[y - 1][x]):
+        count += 1
+
+    '''Right'''
+    if (x < column - 1) and grid[y][x + 1]:
+        count += 1
+
+    '''Bottom'''
+    if (y < row - 1) and grid[y + 1][x]:
+        count += 1
+
+    '''left'''
+    if (x > 0 and grid[y][x - 1]):
+        count += 1
+
+    return count
 
 
 def island_perimeter(grid):
-    '''
-    Returns the perimeter of the island descriibed in a grid
-    Args:
-        grid (list): A list of lists of integers
-    '''
+    row = len(grid)
+    column = len(grid[1])
     perimeter = 0
-    for i in range(len(grid)):
-        for j in range(len(grid[i])):
-            if grid[i][j] == 1:
-                try:
-                    if grid[i][j - 1] == 0:
-                        perimeter += 1
-                except:
-                    pass
 
-                try:
-                    if grid[i - 1][j] == 0:
-                        perimeter += 1
-                except:
-                    pass
-
-                try:
-                    if grid[i][j + 1] == 0:
-                        perimeter += 1
-                except:
-                    pass
-
-                try:
-                    if grid[i + 1][j] == 0:
-                        perimeter += 1
-                except:
-                    pass
+    for y in range(0, row):
+        for x in range(0, column):
+            if grid[y][x]:
+                perimeter += 4 - (neighbours_no(grid, y, x))
 
     return perimeter
